@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180608 14:13:31.892" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\1.MY DATA\1.WORKING\1.PROJECTS\1.ERT\5.ERT\Automation\Core Project\trunk\Boston\SourceCode\Unity\UBX0101-OAR-101\Test Scripts\CheckBuild.robot" id="s1" name="CheckBuild">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>DeviceKeywords.Setup</arg>
+<arg>AND</arg>
+<arg>OperatingSystem.Create Directory</arg>
+<arg>${ScreenshotPath}</arg>
+</arguments>
+<kw name="Setup" library="DeviceKeywords">
+<doc>Creates the device object for the test</doc>
+<msg timestamp="20180608 14:13:32.123" html="yes" level="INFO">
+            Session info:&lt;br&gt;
+            &lt;b&gt;APPIUM_URL&lt;/b&gt;:  http://127.0.0.1:4723/wd/hub&lt;br&gt;
+            &lt;b&gt;DEVICE_SERIAL&lt;/b&gt;:  fdd76a72&lt;br&gt;
+            &lt;b&gt;PLATFORM_NAME&lt;/b&gt;:  Android&lt;br&gt;
+            &lt;b&gt;PLATFORM_VERSION&lt;/b&gt;:  4.4.4&lt;br&gt;
+            &lt;b&gt;MODEL&lt;/b&gt;:  SM-E500YZ&lt;br&gt;
+            &lt;b&gt;MANUFACTURER&lt;/b&gt;:  samsung&lt;br&gt;
+            &lt;b&gt;CHROME_VERSION&lt;/b&gt;:  61.0.3163.98&lt;br&gt;
+            &lt;b&gt;APK_TYPE&lt;/b&gt;:  logPadSyndication&lt;br&gt;
+            &lt;b&gt;APK_VERSION&lt;/b&gt;:  2.4.0.21&lt;br&gt;
+            &lt;b&gt;APP&lt;/b&gt;:  D:\0.BuildDownload\HH-synd-unsigned-Unity-ubct-oa-p1-0001-SYN-21.apk&lt;br&gt;
+            &lt;b&gt;APP_ACTIVITY&lt;/b&gt;:  com.ert.Unityubctoap10001SYN.hh.MainActivity&lt;br&gt;
+            &lt;b&gt;APP_PACKAGE&lt;/b&gt;:  com.ert.Unityubctoap10001SYN.hh&lt;br&gt;
+        </msg>
+<msg timestamp="20180608 14:13:32.141" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"browserName": "Android", "platformName": "Android", "browserVersion": "4.4.4"}, "firstMatch": [{}]}, "desiredCapabilities": {"applicationName": "samsung SM-E500YZ", "deviceName": "fdd76a72", "loggingPrefs": {"browser": "ALL"}, "deviceModel": "SM-E500YZ", "javascriptEnabled": true, "app": "D:\\0.BuildDownload\\HH-synd-unsigned-Unity-ubct-oa-p1-0001-SYN-21.apk", "appVersion": "2.4.0.21", "deviceManufacturer": "samsung", "browserName": "Android", "version": "4.4.4", "newCommandTimeout": 6000, "platformVersion": "4.4.4", "appPackage": "com.ert.Unityubctoap10001SYN.hh", "chromeVersion": "61.0.3163.98", "platformName": "Android", "appActivity": "com.ert.Unityubctoap10001SYN.hh.MainActivity"}}</msg>
+<msg timestamp="20180608 14:13:56.602" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'deviceName': u'fdd76a72', u'takesScreenshot': True, u'app': u'D:\\0.BuildDownload\\HH-synd-unsigned-Unity-ubct-oa-p1-0001-SYN-21.apk', u'networkConnectionEnabled': True, u'chromeVersion': u'61.0.3163.98', u'deviceUDID': u'fdd76a72', u'newCommandTimeout': 6000, u'locationContextEnabled': False, u'deviceScreenSize': u'720x1280', u'applicationName': u'samsung SM-E500YZ', u'deviceModel': u'SM-E500YZ', u'appVersion': u'2.4.0.21', u'deviceManufacturer': u'samsung', u'platform': u'LINUX', u'version': u'4.4.4', u'platformName': u'Android', u'webStorageEnabled': False, u'warnings': {}, u'javascriptEnabled': True, u'databaseEnabled': False, u'desired': {u'applicationName': u'samsung SM-E500YZ', u'deviceName': u'fdd76a72', u'chromeVersion': u'61.0.3163.98', u'deviceModel': u'SM-E500YZ', u'javascriptEnabled': True, u'app': u'D:\\0.BuildDownload\\HH-synd-unsigned-Unity-ubct-oa-p1-0001-SYN-21.apk', u'appVersion': u'2.4.0.21', u'deviceManufacturer': u'samsung', u'browserName': u'Android', u'version': u'4.4.4', u'newCommandTimeout': 6000, u'platformVersion': u'4.4.4', u'appPackage': u'com.ert.Unityubctoap10001SYN.hh', u'loggingPrefs': {u'browser': u'ALL'}, u'platformName': u'Android', u'appActivity': u'com.ert.Unityubctoap10001SYN.hh.MainActivity'}, u'browserName': u'Android', u'platformVersion': u'4.4.4', u'appPackage': u'com.ert.Unityubctoap10001SYN.hh', u'appActivity': u'com.ert.Unityubctoap10001SYN.hh.MainActivity', u'loggingPrefs': {u'browser': u'ALL'}}}</msg>
+<msg timestamp="20180608 14:13:56.602" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/contexts {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3"}</msg>
+<msg timestamp="20180608 14:13:57.852" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': [u'NATIVE_APP', u'WEBVIEW_com.ert.Unityubctoap10001SYN.hh']}</msg>
+<msg timestamp="20180608 14:13:57.852" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/contexts {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3"}</msg>
+<msg timestamp="20180608 14:13:59.091" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': [u'NATIVE_APP', u'WEBVIEW_com.ert.Unityubctoap10001SYN.hh']}</msg>
+<msg timestamp="20180608 14:13:59.092" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/context {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "name": "WEBVIEW_com.ert.Unityubctoap10001SYN.hh"}</msg>
+<msg timestamp="20180608 14:14:10.251" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:10.251" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/timeouts/async_script {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "ms": 60000.0}</msg>
+<msg timestamp="20180608 14:14:10.276" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:10.276" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:10.458" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-1'}}</msg>
+<status status="PASS" endtime="20180608 14:14:10.459" starttime="20180608 14:13:32.123"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${ScreenshotPath}</arg>
+</arguments>
+<msg timestamp="20180608 14:14:10.459" html="yes" level="INFO">Directory '&lt;a href="file://D:\000_IMPLEMENT\CheckBuildJenkin\screenshots\PracticeDiary"&gt;D:\000_IMPLEMENT\CheckBuildJenkin\screenshots\PracticeDiary&lt;/a&gt;' already exists.</msg>
+<status status="PASS" endtime="20180608 14:14:10.460" starttime="20180608 14:14:10.459"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:10.460" starttime="20180608 14:13:32.123"></status>
+</kw>
+<test id="s1-t1" name="Enter Study URL and Setup Code">
+<kw name="Enter Study Url and Setup Code" library="SetupKeywords">
+<doc>Enter Study URL and Setup Code</doc>
+<arguments>
+<arg>${TestBedVariables::QR Code}</arg>
+<arg>${TestBedVariables::SetupCode}</arg>
+</arguments>
+<kw name="Enter Study URL And Setup Codes" library="DeviceKeywords">
+<doc>Enter the study url and setup code.  Then click next</doc>
+<arguments>
+<arg>${studyURL}</arg>
+<arg>${SetupCode}</arg>
+</arguments>
+<msg timestamp="20180608 14:14:10.749" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/execute {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "args": [], "script": "return LF.Data.Questionnaire.$txtStudy.get(0);"}</msg>
+<msg timestamp="20180608 14:14:10.814" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-2'}}</msg>
+<msg timestamp="20180608 14:14:10.814" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-2/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-2"}</msg>
+<msg timestamp="20180608 14:14:11.293" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:11.294" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-2/value {"text": "Trainer", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-2", "value": ["T", "r", "a", "i", "n", "e", "r"]}</msg>
+<msg timestamp="20180608 14:14:11.787" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:11.787" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/execute {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "args": [], "script": "return LF.Data.Questionnaire.$txtCode.get(0);"}</msg>
+<msg timestamp="20180608 14:14:11.824" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-3'}}</msg>
+<msg timestamp="20180608 14:14:11.825" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-3/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-3"}</msg>
+<msg timestamp="20180608 14:14:12.190" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:12.191" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-3/value {"text": "12345", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-3", "value": ["1", "2", "3", "4", "5"]}</msg>
+<msg timestamp="20180608 14:14:12.660" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:12.660" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/execute {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "args": [], "script": "return LF.Data.Questionnaire.$next.get(0);"}</msg>
+<msg timestamp="20180608 14:14:12.699" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-4'}}</msg>
+<msg timestamp="20180608 14:14:12.699" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-4/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-4"}</msg>
+<msg timestamp="20180608 14:14:13.077" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:13.077" starttime="20180608 14:14:10.748"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:13.077" starttime="20180608 14:14:10.747"></status>
+</kw>
+<doc>Action: Setup of LPapp - Enter Study URL and Setup Code on Setup screen
+
+----------------------------------------------------------------------
+
+Expected Result: Study URL and Setup code entered successfully and Setup screen appears
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:13.077" critical="yes" starttime="20180608 14:14:10.460"></status>
+</test>
+<test id="s1-t2" name="Select Language">
+<kw name="Complete Language Selection screen" library="SetupKeywords">
+<doc>Click Next button on Language Selection screen</doc>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<msg timestamp="20180608 14:14:13.079" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:13.612" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-5'}}</msg>
+<msg timestamp="20180608 14:14:13.613" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-5/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-5"}</msg>
+<msg timestamp="20180608 14:14:13.758" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:13.758" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-5/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-5"}</msg>
+<msg timestamp="20180608 14:14:13.863" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:13.863" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:13.941" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-6'}}</msg>
+<msg timestamp="20180608 14:14:13.941" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-5/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-5"}</msg>
+<msg timestamp="20180608 14:14:14.345" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:14.345" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-6/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-6"}</msg>
+<msg timestamp="20180608 14:14:14.643" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:14.743" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-6/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-6"}</msg>
+<msg timestamp="20180608 14:14:14.974" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:14.974" starttime="20180608 14:14:13.078"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:14.975" starttime="20180608 14:14:13.078"></status>
+</kw>
+<doc>Action: Select Language screen, accept default of English 
+
+----------------------------------------------------------------------
+
+Expected Result: Click Next on this screen.
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:14.975" critical="yes" starttime="20180608 14:14:13.077"></status>
+</test>
+<test id="s1-t3" name="Select Time Zone">
+<kw name="Select Time Zone" library="SetupKeywords">
+<doc>Select dropdown and selects (GMT+07:00) Asia/Krasnoyarsk</doc>
+<kw name="Click Time Zone Dropdown" library="DeviceKeywords">
+<doc>Click time zone dropdown</doc>
+<msg timestamp="20180608 14:14:14.976" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "xpath", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "id('select2-selectTimeZone-container')/.."}</msg>
+<msg timestamp="20180608 14:14:15.134" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-7'}}</msg>
+<msg timestamp="20180608 14:14:15.134" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-7/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-7"}</msg>
+<msg timestamp="20180608 14:14:15.285" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:15.286" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-7/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-7"}</msg>
+<msg timestamp="20180608 14:14:15.363" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:15.364" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-7/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-7"}</msg>
+<msg timestamp="20180608 14:14:16.168" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:16.169" starttime="20180608 14:14:14.976"></status>
+</kw>
+<kw name="Select Time Zone" library="DeviceKeywords">
+<doc>Select the time zone in the setup time zone screen. Note that this will fail for Daylight Savings</doc>
+<arguments>
+<arg>(GMT+07:00) Asia/Krasnoyarsk</arg>
+</arguments>
+<msg timestamp="20180608 14:14:16.169" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/elements {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#select2-selectTimeZone-results &gt; li"}</msg>
+<msg timestamp="20180608 14:14:16.288" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': [{u'ELEMENT': u'0.5651251107919961-8'}, {u'ELEMENT': u'0.5651251107919961-9'}, {u'ELEMENT': u'0.5651251107919961-10'}, {u'ELEMENT': u'0.5651251107919961-11'}, {u'ELEMENT': u'0.5651251107919961-12'}, {u'ELEMENT': u'0.5651251107919961-13'}, {u'ELEMENT': u'0.5651251107919961-14'}, {u'ELEMENT': u'0.5651251107919961-15'}, {u'ELEMENT': u'0.5651251107919961-16'}, {u'ELEMENT': u'0.5651251107919961-17'}, {u'ELEMENT': u'0.5651251107919961-18'}, {u'ELEMENT': u'0.5651251107919961-19'}, {u'ELEMENT': u'0.5651251107919961-20'}, {u'ELEMENT': u'0.5651251107919961-21'}, {u'ELEMENT': u'0.5651251107919961-22'}, {u'ELEMENT': u'0.5651251107919961-23'}, {u'ELEMENT': u'0.5651251107919961-24'}, {u'ELEMENT': u'0.5651251107919961-25'}, {u'ELEMENT': u'0.5651251107919961-26'}, {u'ELEMENT': u'0.5651251107919961-27'}, {u'ELEMENT': u'0.5651251107919961-28'}, {u'ELEMENT': u'0.5651251107919961-29'}, {u'ELEMENT': u'0.5651251107919961-30'}, {u'ELEMENT': u'0.5651251107919961-31'}, {u'ELEMENT': u'0.5651251107919961-32'}, {u'ELEMENT': u'0.5651251107919961-33'}, {u'ELEMENT': u'0.5651251107919961-34'}, {u'ELEMENT': u'0.5651251107919961-35'}, {u'ELEMENT': u'0.5651251107919961-36'}, {u'ELEMENT': u'0.5651251107919961-37'}, {u'ELEMENT': u'0.5651251107919961-38'}, {u'ELEMENT': u'0.5651251107919961-39'}, {u'ELEMENT': u'0.5651251107919961-40'}, {u'ELEMENT': u'0.5651251107919961-41'}, {u'ELEMENT': u'0.5651251107919961-42'}, {u'ELEMENT': u'0.5651251107919961-43'}, {u'ELEMENT': u'0.5651251107919961-44'}, {u'ELEMENT': u'0.5651251107919961-45'}, {u'ELEMENT': u'0.5651251107919961-46'}, {u'ELEMENT': u'0.5651251107919961-47'}, {u'ELEMENT': u'0.5651251107919961-48'}, {u'ELEMENT': u'0.5651251107919961-49'}, {u'ELEMENT': u'0.5651251107919961-50'}, {u'ELEMENT': u'0.5651251107919961-51'}, {u'ELEMENT': u'0.5651251107919961-52'}, {u'ELEMENT': u'0.5651251107919961-53'}, {u'ELEMENT': u'0.5651251107919961-54'}, {u'ELEMENT': u'0.5651251107919961-55'}, {u'ELEMENT': u'0.5651251107919961-56'}, {u'ELEMENT': u'0.5651251107919961-57'}, {u'ELEMENT': u'0.5651251107919961-58'}, {u'ELEMENT': u'0.5651251107919961-59'}, {u'ELEMENT': u'0.5651251107919961-60'}, {u'ELEMENT': u'0.5651251107919961-61'}, {u'ELEMENT': u'0.5651251107919961-62'}, {u'ELEMENT': u'0.5651251107919961-63'}, {u'ELEMENT': u'0.5651251107919961-64'}, {u'ELEMENT': u'0.5651251107919961-65'}, {u'ELEMENT': u'0.5651251107919961-66'}, {u'ELEMENT': u'0.5651251107919961-67'}, {u'ELEMENT': u'0.5651251107919961-68'}, {u'ELEMENT': u'0.5651251107919961-69'}, {u'ELEMENT': u'0.5651251107919961-70'}, {u'ELEMENT': u'0.5651251107919961-71'}, {u'ELEMENT': u'0.5651251107919961-72'}, {u'ELEMENT': u'0.5651251107919961-73'}, {u'ELEMENT': u'0.5651251107919961-74'}, {u'ELEMENT': u'0.5651251107919961-75'}, {u'ELEMENT': u'0.5651251107919961-76'}, {u'ELEMENT': u'0.5651251107919961-77'}]}</msg>
+<msg timestamp="20180608 14:14:16.289" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-8/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-8"}</msg>
+<msg timestamp="20180608 14:14:16.448" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-10:00) Pacific/Honolulu'}</msg>
+<msg timestamp="20180608 14:14:16.449" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-9/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-9"}</msg>
+<msg timestamp="20180608 14:14:16.606" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-08:00) America/Anchorage'}</msg>
+<msg timestamp="20180608 14:14:16.606" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-10/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-10"}</msg>
+<msg timestamp="20180608 14:14:16.798" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-08:00) US/Alaska'}</msg>
+<msg timestamp="20180608 14:14:16.798" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-11/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-11"}</msg>
+<msg timestamp="20180608 14:14:16.975" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Dawson_Creek'}</msg>
+<msg timestamp="20180608 14:14:16.975" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-12/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-12"}</msg>
+<msg timestamp="20180608 14:14:17.125" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Hermosillo'}</msg>
+<msg timestamp="20180608 14:14:17.126" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-13/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-13"}</msg>
+<msg timestamp="20180608 14:14:17.312" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Los_Angeles'}</msg>
+<msg timestamp="20180608 14:14:17.312" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-14/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-14"}</msg>
+<msg timestamp="20180608 14:14:17.487" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Phoenix'}</msg>
+<msg timestamp="20180608 14:14:17.487" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-15/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-15"}</msg>
+<msg timestamp="20180608 14:14:17.655" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Santa_Isabel'}</msg>
+<msg timestamp="20180608 14:14:17.655" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-16/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-16"}</msg>
+<msg timestamp="20180608 14:14:17.859" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Tijuana'}</msg>
+<msg timestamp="20180608 14:14:17.860" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-17/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-17"}</msg>
+<msg timestamp="20180608 14:14:18.017" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-07:00) America/Vancouver'}</msg>
+<msg timestamp="20180608 14:14:18.017" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-18/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-18"}</msg>
+<msg timestamp="20180608 14:14:18.162" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-06:00) America/Chihuahua'}</msg>
+<msg timestamp="20180608 14:14:18.163" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-19/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-19"}</msg>
+<msg timestamp="20180608 14:14:18.344" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-06:00) America/Ojinaga'}</msg>
+<msg timestamp="20180608 14:14:18.344" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-20/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-20"}</msg>
+<msg timestamp="20180608 14:14:18.495" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-06:00) America/Yellowknife'}</msg>
+<msg timestamp="20180608 14:14:18.495" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-21/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-21"}</msg>
+<msg timestamp="20180608 14:14:18.648" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Cancun'}</msg>
+<msg timestamp="20180608 14:14:18.649" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-22/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-22"}</msg>
+<msg timestamp="20180608 14:14:18.804" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Chicago'}</msg>
+<msg timestamp="20180608 14:14:18.804" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-23/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-23"}</msg>
+<msg timestamp="20180608 14:14:18.975" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Matamoros'}</msg>
+<msg timestamp="20180608 14:14:18.975" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-24/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-24"}</msg>
+<msg timestamp="20180608 14:14:19.126" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Merida'}</msg>
+<msg timestamp="20180608 14:14:19.126" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-25/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-25"}</msg>
+<msg timestamp="20180608 14:14:19.274" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Mexico_City'}</msg>
+<msg timestamp="20180608 14:14:19.274" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-26/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-26"}</msg>
+<msg timestamp="20180608 14:14:19.446" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Monterrey'}</msg>
+<msg timestamp="20180608 14:14:19.447" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-27/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-27"}</msg>
+<msg timestamp="20180608 14:14:19.609" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Rio_Branco'}</msg>
+<msg timestamp="20180608 14:14:19.609" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-28/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-28"}</msg>
+<msg timestamp="20180608 14:14:19.766" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-05:00) America/Winnipeg'}</msg>
+<msg timestamp="20180608 14:14:19.766" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-29/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-29"}</msg>
+<msg timestamp="20180608 14:14:19.922" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-04:00) America/Montreal'}</msg>
+<msg timestamp="20180608 14:14:19.922" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-30/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-30"}</msg>
+<msg timestamp="20180608 14:14:20.106" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-04:00) America/New_York'}</msg>
+<msg timestamp="20180608 14:14:20.107" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-31/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-31"}</msg>
+<msg timestamp="20180608 14:14:20.268" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-04:00) America/Puerto_Rico'}</msg>
+<msg timestamp="20180608 14:14:20.268" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-32/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-32"}</msg>
+<msg timestamp="20180608 14:14:20.447" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-03:00) America/Bahia'}</msg>
+<msg timestamp="20180608 14:14:20.447" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-33/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-33"}</msg>
+<msg timestamp="20180608 14:14:20.627" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-03:00) America/Belem'}</msg>
+<msg timestamp="20180608 14:14:20.627" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-34/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-34"}</msg>
+<msg timestamp="20180608 14:14:20.792" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-03:00) America/Halifax'}</msg>
+<msg timestamp="20180608 14:14:20.792" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-35/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-35"}</msg>
+<msg timestamp="20180608 14:14:20.970" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-03:00) America/Sao_Paulo'}</msg>
+<msg timestamp="20180608 14:14:20.970" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-36/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-36"}</msg>
+<msg timestamp="20180608 14:14:21.151" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-02:30) America/St_Johns'}</msg>
+<msg timestamp="20180608 14:14:21.151" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-37/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-37"}</msg>
+<msg timestamp="20180608 14:14:21.317" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-02:30) Canada/Newfoundland'}</msg>
+<msg timestamp="20180608 14:14:21.317" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-38/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-38"}</msg>
+<msg timestamp="20180608 14:14:21.520" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT-02:00) America/Noronha'}</msg>
+<msg timestamp="20180608 14:14:21.520" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-39/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-39"}</msg>
+<msg timestamp="20180608 14:14:21.759" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+01:00) Europe/Dublin'}</msg>
+<msg timestamp="20180608 14:14:21.759" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-40/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-40"}</msg>
+<msg timestamp="20180608 14:14:21.920" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+01:00) Europe/London'}</msg>
+<msg timestamp="20180608 14:14:21.920" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-41/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-41"}</msg>
+<msg timestamp="20180608 14:14:22.118" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Africa/Johannesburg'}</msg>
+<msg timestamp="20180608 14:14:22.118" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-42/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-42"}</msg>
+<msg timestamp="20180608 14:14:22.280" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Amsterdam'}</msg>
+<msg timestamp="20180608 14:14:22.280" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-43/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-43"}</msg>
+<msg timestamp="20180608 14:14:22.481" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Berlin'}</msg>
+<msg timestamp="20180608 14:14:22.481" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-44/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-44"}</msg>
+<msg timestamp="20180608 14:14:22.667" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Brussels'}</msg>
+<msg timestamp="20180608 14:14:22.667" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-45/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-45"}</msg>
+<msg timestamp="20180608 14:14:22.855" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Copenhagen'}</msg>
+<msg timestamp="20180608 14:14:22.855" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-46/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-46"}</msg>
+<msg timestamp="20180608 14:14:23.039" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Kaliningrad'}</msg>
+<msg timestamp="20180608 14:14:23.039" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-47/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-47"}</msg>
+<msg timestamp="20180608 14:14:23.233" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Ljubljana'}</msg>
+<msg timestamp="20180608 14:14:23.233" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-48/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-48"}</msg>
+<msg timestamp="20180608 14:14:23.462" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Madrid'}</msg>
+<msg timestamp="20180608 14:14:23.462" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-49/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-49"}</msg>
+<msg timestamp="20180608 14:14:23.678" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Paris'}</msg>
+<msg timestamp="20180608 14:14:23.678" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-50/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-50"}</msg>
+<msg timestamp="20180608 14:14:23.889" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Rome'}</msg>
+<msg timestamp="20180608 14:14:23.889" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-51/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-51"}</msg>
+<msg timestamp="20180608 14:14:24.088" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Stockholm'}</msg>
+<msg timestamp="20180608 14:14:24.089" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-52/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-52"}</msg>
+<msg timestamp="20180608 14:14:24.275" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Vienna'}</msg>
+<msg timestamp="20180608 14:14:24.275" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-53/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-53"}</msg>
+<msg timestamp="20180608 14:14:24.464" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Warsaw'}</msg>
+<msg timestamp="20180608 14:14:24.464" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-54/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-54"}</msg>
+<msg timestamp="20180608 14:14:24.648" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+02:00) Europe/Zagreb'}</msg>
+<msg timestamp="20180608 14:14:24.648" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-55/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-55"}</msg>
+<msg timestamp="20180608 14:14:24.818" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+03:00) Asia/Jerusalem'}</msg>
+<msg timestamp="20180608 14:14:24.819" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-56/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-56"}</msg>
+<msg timestamp="20180608 14:14:24.994" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+03:00) Europe/Athens'}</msg>
+<msg timestamp="20180608 14:14:24.994" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-57/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-57"}</msg>
+<msg timestamp="20180608 14:14:25.180" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+03:00) Europe/Bucharest'}</msg>
+<msg timestamp="20180608 14:14:25.180" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-58/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-58"}</msg>
+<msg timestamp="20180608 14:14:25.346" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+03:00) Europe/Istanbul'}</msg>
+<msg timestamp="20180608 14:14:25.346" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-59/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-59"}</msg>
+<msg timestamp="20180608 14:14:25.517" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+03:00) Europe/Moscow'}</msg>
+<msg timestamp="20180608 14:14:25.517" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-60/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-60"}</msg>
+<msg timestamp="20180608 14:14:25.713" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+03:00) Europe/Vilnius'}</msg>
+<msg timestamp="20180608 14:14:25.713" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-61/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-61"}</msg>
+<msg timestamp="20180608 14:14:25.878" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+05:00) Asia/Yekaterinburg'}</msg>
+<msg timestamp="20180608 14:14:25.878" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-62/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-62"}</msg>
+<msg timestamp="20180608 14:14:26.048" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+06:00) Asia/Omsk'}</msg>
+<msg timestamp="20180608 14:14:26.048" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-63/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-63"}</msg>
+<msg timestamp="20180608 14:14:26.210" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'(GMT+07:00) Asia/Krasnoyarsk'}</msg>
+<msg timestamp="20180608 14:14:26.211" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-63/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-63"}</msg>
+<msg timestamp="20180608 14:14:26.734" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:26.735" starttime="20180608 14:14:16.169"></status>
+</kw>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<arguments>
+<arg>OK</arg>
+</arguments>
+<msg timestamp="20180608 14:14:26.735" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:26.853" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-78'}}</msg>
+<msg timestamp="20180608 14:14:26.853" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-78/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-78"}</msg>
+<msg timestamp="20180608 14:14:26.970" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:26.970" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-78/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-78"}</msg>
+<msg timestamp="20180608 14:14:27.080" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:27.080" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:27.148" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-79'}}</msg>
+<msg timestamp="20180608 14:14:27.148" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-78/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-78"}</msg>
+<msg timestamp="20180608 14:14:27.607" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:27.607" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#modal"}</msg>
+<msg timestamp="20180608 14:14:28.053" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-80'}}</msg>
+<msg timestamp="20180608 14:14:28.053" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#modal h4.modal-title"}</msg>
+<msg timestamp="20180608 14:14:28.202" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-81'}}</msg>
+<msg timestamp="20180608 14:14:28.203" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-81/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-81"}</msg>
+<msg timestamp="20180608 14:14:28.346" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'Time Zone Set Confirmation'}</msg>
+<msg timestamp="20180608 14:14:28.346" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#modal div.modal-body"}</msg>
+<msg timestamp="20180608 14:14:28.497" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-82'}}</msg>
+<msg timestamp="20180608 14:14:28.497" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-82/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-82"}</msg>
+<msg timestamp="20180608 14:14:28.691" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'Are you sure you want to set the Time Zone to: (GMT+07:00) Asia/Krasnoyarsk?'}</msg>
+<msg timestamp="20180608 14:14:28.691" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/elements {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#modal footer &gt; button"}</msg>
+<msg timestamp="20180608 14:14:28.854" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': [{u'ELEMENT': u'0.5651251107919961-83'}, {u'ELEMENT': u'0.5651251107919961-84'}]}</msg>
+<msg timestamp="20180608 14:14:28.854" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-83/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-83"}</msg>
+<msg timestamp="20180608 14:14:29.030" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'Cancel'}</msg>
+<msg timestamp="20180608 14:14:29.030" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-84/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-84"}</msg>
+<msg timestamp="20180608 14:14:29.195" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'OK'}</msg>
+<msg timestamp="20180608 14:14:29.195" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/elements {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#modal footer &gt; button"}</msg>
+<msg timestamp="20180608 14:14:29.258" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': [{u'ELEMENT': u'0.5651251107919961-83'}, {u'ELEMENT': u'0.5651251107919961-84'}]}</msg>
+<msg timestamp="20180608 14:14:29.259" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-83/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-83"}</msg>
+<msg timestamp="20180608 14:14:29.385" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'Cancel'}</msg>
+<msg timestamp="20180608 14:14:29.385" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-84/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-84"}</msg>
+<msg timestamp="20180608 14:14:29.471" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'OK'}</msg>
+<msg timestamp="20180608 14:14:29.471" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-84/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-84"}</msg>
+<msg timestamp="20180608 14:14:29.919" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:29.920" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:29.984" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-79'}}</msg>
+<msg timestamp="20180608 14:14:29.984" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-79/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-79"}</msg>
+<msg timestamp="20180608 14:14:30.083" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:30.183" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-79/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-79"}</msg>
+<msg timestamp="20180608 14:14:30.239" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:30.339" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-79/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-79"}</msg>
+<msg timestamp="20180608 14:14:30.572" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:30.572" starttime="20180608 14:14:26.735"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:30.573" starttime="20180608 14:14:14.976"></status>
+</kw>
+<doc>Action: Select GMT+07:00 time zone from dropdown 
+
+----------------------------------------------------------------------
+
+Expected Result: Time Zone selected successfully.
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:30.573" critical="yes" starttime="20180608 14:14:14.975"></status>
+</test>
+<test id="s1-t4" name="Complete Subject Diary Access Message screen">
+<kw name="Complete Subject Diary Access Message" library="SetupKeywords">
+<doc>Click Next button on Diary Access Message screen</doc>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<msg timestamp="20180608 14:14:30.575" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:30.640" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-85'}}</msg>
+<msg timestamp="20180608 14:14:30.640" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-85/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-85"}</msg>
+<msg timestamp="20180608 14:14:30.755" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:30.755" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-85/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-85"}</msg>
+<msg timestamp="20180608 14:14:30.857" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:30.857" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:30.909" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-86'}}</msg>
+<msg timestamp="20180608 14:14:30.910" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-85/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-85"}</msg>
+<msg timestamp="20180608 14:14:31.310" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:31.311" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-86/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-86"}</msg>
+<msg timestamp="20180608 14:14:31.418" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:31.418" starttime="20180608 14:14:30.575"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:31.418" starttime="20180608 14:14:30.574"></status>
+</kw>
+<doc>Action: Click Next button on Subject Diary Access screen
+
+----------------------------------------------------------------------
+
+Expected Result: End User License screen appears
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:31.419" critical="yes" starttime="20180608 14:14:30.573"></status>
+</test>
+<test id="s1-t5" name="Complete End User License screen">
+<kw name="Complete End User License screen" library="SetupKeywords">
+<doc>Click Next button on End User License screen</doc>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<msg timestamp="20180608 14:14:31.420" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:31.476" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-87'}}</msg>
+<msg timestamp="20180608 14:14:31.476" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-87/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-87"}</msg>
+<msg timestamp="20180608 14:14:31.625" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:31.625" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-87/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-87"}</msg>
+<msg timestamp="20180608 14:14:31.728" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:31.729" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:31.812" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-88'}}</msg>
+<msg timestamp="20180608 14:14:31.812" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-87/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-87"}</msg>
+<msg timestamp="20180608 14:14:32.254" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:32.255" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-88/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-88"}</msg>
+<msg timestamp="20180608 14:14:32.392" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:32.392" starttime="20180608 14:14:31.420"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:32.392" starttime="20180608 14:14:31.420"></status>
+</kw>
+<doc>Action: Click Next button on End User License screen
+
+----------------------------------------------------------------------
+
+Expected Result: Privacy screen appears
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:32.393" critical="yes" starttime="20180608 14:14:31.419"></status>
+</test>
+<test id="s1-t6" name="Complete Privacy Message screen">
+<kw name="Complete Privacy Message" library="SetupKeywords">
+<doc>Click Next button on Privacy Message screen</doc>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<msg timestamp="20180608 14:14:32.394" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:32.485" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-89'}}</msg>
+<msg timestamp="20180608 14:14:32.485" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-89/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-89"}</msg>
+<msg timestamp="20180608 14:14:32.625" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:32.625" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-89/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-89"}</msg>
+<msg timestamp="20180608 14:14:32.754" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:32.754" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:32.858" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-90'}}</msg>
+<msg timestamp="20180608 14:14:32.858" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-89/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-89"}</msg>
+<msg timestamp="20180608 14:14:33.315" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:33.315" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-90/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-90"}</msg>
+<msg timestamp="20180608 14:14:33.477" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:33.477" starttime="20180608 14:14:32.394"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:33.477" starttime="20180608 14:14:32.394"></status>
+</kw>
+<doc>Action: Click Next button on Privacy Message screen
+
+----------------------------------------------------------------------
+
+Expected Result: Setup screen for creating Password appears
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:33.477" critical="yes" starttime="20180608 14:14:32.393"></status>
+</test>
+<test id="s1-t7" name="Enter and Confirm Password on Setup screen">
+<kw name="Enter and Confirm Password on Setup screen" library="SetupKeywords">
+<doc>Enter and Confirm Password</doc>
+<arguments>
+<arg>${TestBedVariables::Patient Password}</arg>
+</arguments>
+<kw name="Enter And Confirm Password" library="DeviceKeywords">
+<doc>Enters and confirms the password during assignment</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20180608 14:14:33.480" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#txtNewPassword"}</msg>
+<msg timestamp="20180608 14:14:33.619" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-91'}}</msg>
+<msg timestamp="20180608 14:14:33.620" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-91/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-91"}</msg>
+<msg timestamp="20180608 14:14:33.751" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:33.751" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-91/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-91"}</msg>
+<msg timestamp="20180608 14:14:33.845" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:33.846" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-91/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-91"}</msg>
+<msg timestamp="20180608 14:14:34.232" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:34.233" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-91/value {"text": "1111", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-91", "value": ["1", "1", "1", "1"]}</msg>
+<msg timestamp="20180608 14:14:34.771" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:34.771" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#txtConfirmPassword"}</msg>
+<msg timestamp="20180608 14:14:34.895" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-92'}}</msg>
+<msg timestamp="20180608 14:14:34.895" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-92/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-92"}</msg>
+<msg timestamp="20180608 14:14:35.041" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:35.041" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-92/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-92"}</msg>
+<msg timestamp="20180608 14:14:35.123" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:35.123" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-92/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-92"}</msg>
+<msg timestamp="20180608 14:14:35.479" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:35.479" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-92/value {"text": "1111", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-92", "value": ["1", "1", "1", "1"]}</msg>
+<msg timestamp="20180608 14:14:35.992" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:35.992" starttime="20180608 14:14:33.480"></status>
+</kw>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<msg timestamp="20180608 14:14:35.992" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:36.108" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-93'}}</msg>
+<msg timestamp="20180608 14:14:36.109" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-93/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-93"}</msg>
+<msg timestamp="20180608 14:14:36.247" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:36.247" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-93/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-93"}</msg>
+<msg timestamp="20180608 14:14:36.398" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:36.398" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:36.483" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-94'}}</msg>
+<msg timestamp="20180608 14:14:36.483" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-93/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-93"}</msg>
+<msg timestamp="20180608 14:14:36.948" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:36.948" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-94/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-94"}</msg>
+<msg timestamp="20180608 14:14:37.128" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:37.129" starttime="20180608 14:14:35.992"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:37.129" starttime="20180608 14:14:33.479"></status>
+</kw>
+<doc>Action: Enter and confirm password on Setup screen
+
+----------------------------------------------------------------------
+
+Expected Result: Password entered and confirmed successfully
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:37.129" critical="yes" starttime="20180608 14:14:33.478"></status>
+</test>
+<test id="s1-t8" name="Enter Security Answer">
+<kw name="Enter Security Answer" library="SetupKeywords">
+<doc>Enter Security Answer. Enters "aaaa" for security answer</doc>
+<kw name="Click Security Question Dropdown" library="DeviceKeywords">
+<doc>Click the security question dropdown</doc>
+<msg timestamp="20180608 14:14:37.131" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": ".select2-container"}</msg>
+<msg timestamp="20180608 14:14:37.293" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-95'}}</msg>
+<msg timestamp="20180608 14:14:37.294" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-95/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-95"}</msg>
+<msg timestamp="20180608 14:14:37.564" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:37.564" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-95/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-95"}</msg>
+<msg timestamp="20180608 14:14:37.760" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:37.760" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-95/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-95"}</msg>
+<msg timestamp="20180608 14:14:38.614" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:38.614" starttime="20180608 14:14:37.130"></status>
+</kw>
+<kw name="Select Security Question And Answer" library="DeviceKeywords">
+<doc>Select and answer security question. REQUIRES SECURITY QUESTION DROPDOWN BE CLICKED FIRST</doc>
+<arguments>
+<arg>What is your mother's maiden name?</arg>
+<arg>answer</arg>
+</arguments>
+<msg timestamp="20180608 14:14:38.615" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/elements {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#select2-secret_question-results &gt; li"}</msg>
+<msg timestamp="20180608 14:14:38.754" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': [{u'ELEMENT': u'0.5651251107919961-96'}, {u'ELEMENT': u'0.5651251107919961-97'}, {u'ELEMENT': u'0.5651251107919961-98'}, {u'ELEMENT': u'0.5651251107919961-99'}, {u'ELEMENT': u'0.5651251107919961-100'}]}</msg>
+<msg timestamp="20180608 14:14:38.754" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-96/text {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-96"}</msg>
+<msg timestamp="20180608 14:14:38.969" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u"What is your mother's maiden name?"}</msg>
+<msg timestamp="20180608 14:14:38.969" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-96/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-96"}</msg>
+<msg timestamp="20180608 14:14:39.491" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:39.491" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#secret_answer"}</msg>
+<msg timestamp="20180608 14:14:39.649" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-101'}}</msg>
+<msg timestamp="20180608 14:14:39.649" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-101/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-101"}</msg>
+<msg timestamp="20180608 14:14:40.103" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:40.103" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-101/value {"text": "answer", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-101", "value": ["a", "n", "s", "w", "e", "r"]}</msg>
+<msg timestamp="20180608 14:14:40.693" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:40.693" starttime="20180608 14:14:38.614"></status>
+</kw>
+<kw name="Click Setup Next Button" library="DeviceKeywords">
+<doc>Clicks next button on any syndication setup screen</doc>
+<msg timestamp="20180608 14:14:40.693" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "button.nav-forward"}</msg>
+<msg timestamp="20180608 14:14:40.764" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-102'}}</msg>
+<msg timestamp="20180608 14:14:40.764" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-102/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-102"}</msg>
+<msg timestamp="20180608 14:14:40.909" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:40.909" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-102/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-102"}</msg>
+<msg timestamp="20180608 14:14:41.022" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:41.022" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:41.087" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-103'}}</msg>
+<msg timestamp="20180608 14:14:41.087" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-102/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-102"}</msg>
+<msg timestamp="20180608 14:14:41.528" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:41.529" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-103/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-103"}</msg>
+<msg timestamp="20180608 14:14:41.782" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:41.783" starttime="20180608 14:14:40.693"></status>
+</kw>
+<status status="PASS" endtime="20180608 14:14:41.783" starttime="20180608 14:14:37.130"></status>
+</kw>
+<doc>Action: Enter Security answer "answer"
+
+----------------------------------------------------------------------
+
+Expected Result: Security Answer entered successfully
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:41.783" critical="yes" starttime="20180608 14:14:37.129"></status>
+</test>
+<test id="s1-t9" name="Login as Patient">
+<kw name="Enter Gateway Password And Login" library="DeviceKeywords">
+<doc>Type in password for the user and login</doc>
+<arguments>
+<arg>${TestBedVariables::Patient Password}</arg>
+</arguments>
+<msg timestamp="20180608 14:14:41.784" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#application *"}</msg>
+<msg timestamp="20180608 14:14:41.951" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-104'}}</msg>
+<msg timestamp="20180608 14:14:41.952" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#password"}</msg>
+<msg timestamp="20180608 14:14:42.155" level="DEBUG">Finished Request {u'status': 7, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'no such element: Unable to locate element: {"method":"css selector","selector":"#password"}\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<msg timestamp="20180608 14:14:42.656" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#password"}</msg>
+<msg timestamp="20180608 14:14:42.751" level="DEBUG">Finished Request {u'status': 7, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'no such element: Unable to locate element: {"method":"css selector","selector":"#password"}\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<msg timestamp="20180608 14:14:43.251" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#password"}</msg>
+<msg timestamp="20180608 14:14:43.322" level="DEBUG">Finished Request {u'status': 7, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'no such element: Unable to locate element: {"method":"css selector","selector":"#password"}\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<msg timestamp="20180608 14:14:43.822" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#password"}</msg>
+<msg timestamp="20180608 14:14:43.890" level="DEBUG">Finished Request {u'status': 7, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'no such element: Unable to locate element: {"method":"css selector","selector":"#password"}\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<msg timestamp="20180608 14:14:44.390" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#password"}</msg>
+<msg timestamp="20180608 14:14:44.486" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-105'}}</msg>
+<msg timestamp="20180608 14:14:44.486" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-105/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-105"}</msg>
+<msg timestamp="20180608 14:14:44.728" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:44.728" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-105/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-105"}</msg>
+<msg timestamp="20180608 14:14:44.868" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:44.868" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-105/value {"text": "1111", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-105", "value": ["1", "1", "1", "1"]}</msg>
+<msg timestamp="20180608 14:14:45.399" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:45.399" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-105/attribute/value {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "name": "value", "id": "0.5651251107919961-105"}</msg>
+<msg timestamp="20180608 14:14:45.462" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': u'1111'}</msg>
+<msg timestamp="20180608 14:14:45.462" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element {"using": "css selector", "sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "value": "#login"}</msg>
+<msg timestamp="20180608 14:14:45.574" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'ELEMENT': u'0.5651251107919961-106'}}</msg>
+<msg timestamp="20180608 14:14:45.574" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-106/displayed {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-106"}</msg>
+<msg timestamp="20180608 14:14:45.720" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:45.721" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-106/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-106"}</msg>
+<msg timestamp="20180608 14:14:45.803" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': True}</msg>
+<msg timestamp="20180608 14:14:45.803" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-106/click {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-106"}</msg>
+<msg timestamp="20180608 14:14:46.228" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<msg timestamp="20180608 14:14:46.228" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3/element/0.5651251107919961-104/enabled {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3", "id": "0.5651251107919961-104"}</msg>
+<msg timestamp="20180608 14:14:46.417" level="DEBUG">Finished Request {u'status': 10, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': {u'message': u'stale element reference: element is not attached to the page document\n  (Session info: webview=33.0.0.0)\n  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64)'}}</msg>
+<status status="PASS" endtime="20180608 14:14:46.417" starttime="20180608 14:14:41.784"></status>
+</kw>
+<doc>Action: Login as patient to patient Gateway
+
+----------------------------------------------------------------------
+
+Expected Result: Patient login successful
+
+----------------------------------------------------------------------
+
+Notes: -
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:46.417" critical="yes" starttime="20180608 14:14:41.783"></status>
+</test>
+<kw type="teardown" name="Teardown" library="DeviceKeywords">
+<doc>Cleans up the Device object and shuts down appium session</doc>
+<msg timestamp="20180608 14:14:46.419" level="DEBUG">DELETE http://127.0.0.1:4723/wd/hub/session/d04ad09d-3b6e-41f8-b603-b12968c56cc3 {"sessionId": "d04ad09d-3b6e-41f8-b603-b12968c56cc3"}</msg>
+<msg timestamp="20180608 14:14:51.938" level="DEBUG">Finished Request {u'status': 0, u'sessionId': u'd04ad09d-3b6e-41f8-b603-b12968c56cc3', u'value': None}</msg>
+<status status="PASS" endtime="20180608 14:14:51.938" starttime="20180608 14:14:46.418"></status>
+</kw>
+<doc>1: Verify report label
+
+2: Verify question text, screen type and control values for all screens
+
+3: Verify all possible branching logic for each screen
+
+4: Verify variables on each screen are correct
+
+5: Take a screenshot of each screen
+
+Test 1: TM010 -&gt; TM020-&gt; TM030_EMPH_MSG -&gt; TM040_INSTR_MSG -&gt; TM080_NRS_BOT (0) -&gt; HHTM010 (Yes) -&gt; TM980 -&gt; TM990 (Finish the training module, I understand how to use the electronic diary.) -&gt; AFFIDAVIT
+
+Test 2: TM010 -&gt; TM020-&gt; TM030_EMPH_MSG -&gt; TM040_INSTR_MSG -&gt; TM080_NRS_BOT (10) -&gt; HHTM010 (No) -&gt; TM980 -&gt; TM990 (Please start this training module again.) -&gt; TM010
+
+Author: An Giang
+
+Last Edited By: An Giang
+
+Date Created: 02-23-2018
+
+Version: V0.1.0.0
+
+Test Case ID: PracticeDiary
+
+Name: Practice Diary
+
+Design Spec version used for development: 2.09
+
+Design Spec section: 9.1
+
+Major Revision Changes: -
+
+Copyright version: -
+
+-------------------------------------------------------------------
+
+</doc>
+<status status="PASS" endtime="20180608 14:14:51.938" starttime="20180608 14:13:31.893"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="9">Critical Tests</stat>
+<stat fail="0" pass="9">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="CheckBuild" pass="9">CheckBuild</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180608 14:13:32.123" level="ERROR">Calling method 'start_suite' of listener 'DoloresRobotListener' failed: Unable to find project root (git folder)!
+ path: D:\1.MY DATA\1.WORKING\1.PROJECTS\1.ERT\5.ERT\Automation\Core Project\trunk\Boston\SourceCode\Unity\UBX0101-OAR-101\Test Scripts\CheckBuild.robot</msg>
+</errors>
+</robot>
