@@ -74,10 +74,7 @@ public class Build {
 	
 			while ((count = bis.read(buffer, 0, 1024)) != -1) {
 				completed += count;
-				if(Math.round((((float) completed / (float) fileLenth) * 100f)) == 2) {
-					System.out.println(Math.round((((float) completed / (float) fileLenth) * 100f)) + " %");
-					return true;
-				}
+				System.out.println(Math.round((((float) completed / (float) fileLenth) * 100f)) + " %");
 				fis.write(buffer, 0, count);
 			}
 	
