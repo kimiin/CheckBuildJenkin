@@ -73,7 +73,7 @@ public class Build {
 		
 				while ((count = bis.read(buffer, 0, 1024)) != -1) {
 					completed += count;
-					System.out.println(Math.round((((float) completed / (float) fileLenth) * 100f)) + " %");
+					System.out.println(latestJenkinsBuildName + " " + Math.round((((float) completed / (float) fileLenth) * 100f)) + " %");
 					fis.write(buffer, 0, count);
 				}
 		
@@ -128,6 +128,8 @@ public class Build {
 	
 
 	public int getNumberOfBuild(String buildName) {
+		if(buildName.equals(""))
+			return 0;
 		return Integer.parseInt(buildName.substring(buildName.indexOf("SYN-") + 4, buildName.indexOf(".apk")));
 	}
 
