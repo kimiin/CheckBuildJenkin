@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ert.build.Build;
+import com.ert.report.Report;
 import com.ert.utils.Excel;
 
 public class Runner {
@@ -13,21 +14,20 @@ public class Runner {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
-		File directory = new File("");
-		List<Build> listBuild = new ArrayList<Build>();
-		String reportPath = directory.getAbsolutePath() + "/src/com/ert/resource/DataTemplate.xlsx";
+		Report report1 = new Report("", "E:/TestBuild/", "Alnylam-ALN-AS1-003");
+		Report report2 = new Report("", "E:/TestBuild/", "Astellas-7465-cl-0301");
 		
-		listBuild = Excel.readBuildInfo(reportPath);
+		Build build1 = new Build(report1);
+		Build build2 = new Build(report2);
+		
+		List<Build> listBuild = new ArrayList<>();
+		listBuild.add(build1);
+		listBuild.add(build2);
 		
 		for (Build build : listBuild) {
-			if(build.downloadUsingStream()) {
-				build.setIsDownloaded("Yes");
-
-			}
-			else {
-				build.setIsDownloaded("No");
-			}
-			Excel.writeDownloadStatus(reportPath, build);
+			//build.downloadUsingNIO();
+			build.setDownloadedToReport();
+			System.out.println(build);
 		}
 
 	}

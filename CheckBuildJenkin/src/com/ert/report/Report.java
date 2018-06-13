@@ -8,6 +8,7 @@ public class Report{
 	private String jenkinBuildPath;
 	private String localPath;
 	private String studyName;
+	private boolean isReleased;
 	private boolean isDownloaded;
 	private boolean isExecuted;
 	private boolean isBadBuild;
@@ -95,9 +96,14 @@ public class Report{
 	public void setOutputPath(String outputPath) {
 		this.outputPath = outputPath;
 	}
-	
-	
-	
-	
-	
+
+
+	public boolean isReleased() {
+		return isReleased;
+	}
+
+
+	public void setReleased(boolean isReleased) {
+		this.isReleased = isReleased;
+	}	
 }
