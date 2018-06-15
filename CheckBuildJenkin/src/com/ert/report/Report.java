@@ -8,6 +8,7 @@ public class Report{
 	private String jenkinBuildPath;
 	private String localPath;
 	private String studyName;
+	private String LocalBuildPath;
 	private boolean isReleased;
 	private boolean isDownloaded;
 	private boolean isExecuted;
@@ -55,6 +56,16 @@ public class Report{
 
 	public void setStudyName(String studyName) {
 		this.studyName = studyName;
+	}
+
+	
+	public String getLocalBuildPath() {
+		return LocalBuildPath;
+	}
+
+
+	public void setLocalBuildPath(String localBuildPath) {
+		LocalBuildPath = localBuildPath;
 	}
 
 

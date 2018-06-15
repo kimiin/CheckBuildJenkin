@@ -73,12 +73,13 @@ public class Build {
 		
 				while ((count = bis.read(buffer, 0, 1024)) != -1) {
 					completed += count;
-					System.out.println(latestJenkinsBuildName + " " + Math.round((((float) completed / (float) fileLenth) * 100f)) + " %");
+					//System.out.println(latestJenkinsBuildName + " " + Math.round((((float) completed / (float) fileLenth) * 100f)) + " %");
 					fis.write(buffer, 0, count);
 				}
 		
 				FileChannel fc = fis.getChannel();
 				if (fc.size() >= fileLenth) {
+					report.setLocalBuildPath(localDownloadPath);
 					isComplete = true;
 				}
 		
@@ -88,13 +89,14 @@ public class Build {
 			else {
 				report.setReleased(false);;
 			}
+
 			return isComplete;
 		}catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}finally {
 			File file = new File(localDownloadPath);
 			if(!localDownloadPath.equals("")){
-				if(!file.exists() || completed != fileLenth) {
+				if(!file.exists() || isComplete == false) {
 					System.out.println("redownload");
 					downloadUsingStream();
 				}
@@ -145,6 +147,7 @@ public class Build {
 
 		if (lastFilePath.isPresent()) {
 			System.out.println("Latest local build: " + lastFilePath.get().getFileName().toString());
+			report.setLocalBuildPath(report.getLocalPath() + report.getStudyName() + "/" + lastFilePath.get().getFileName().toString());
 			this.latestLocalBuildName = lastFilePath.get().getFileName().toString();
 		}
 	}
@@ -195,7 +198,7 @@ public class Build {
 	}
 
 	public String toString() {
-		return report.getLocalPath() + " " + report.getStudyName() + " " + report.isReleased() + " "
+		return report.getLocalPath() + " " + report.getStudyName() + " " + report.getLocalBuildPath() + " " + report.isReleased() + " "
 				+ report.isDownloaded();
 	}
 }
