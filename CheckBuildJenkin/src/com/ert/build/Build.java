@@ -147,7 +147,7 @@ public class Build {
 
 		if (lastFilePath.isPresent()) {
 			System.out.println("Latest local build: " + lastFilePath.get().getFileName().toString());
-			report.setLocalBuildPath(report.getLocalPath() + report.getStudyName() + "/" + lastFilePath.get().getFileName().toString());
+			//report.setLocalBuildPath(report.getLocalPath() + report.getStudyName() + "/" + lastFilePath.get().getFileName().toString());
 			this.latestLocalBuildName = lastFilePath.get().getFileName().toString();
 		}
 	}
@@ -198,7 +198,7 @@ public class Build {
 	}
 
 	public String toString() {
-		return report.getLocalPath() + " " + report.getStudyName() + " " + report.getLocalBuildPath() + " " + report.isReleased() + " "
+		//return report.getLocalPath() + " " + report.getStudyName() + " " + report.getLocalBuildPath() + " " + report.isReleased() + " "
 				+ report.isDownloaded();
 	}
 }
